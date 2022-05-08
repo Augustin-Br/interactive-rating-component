@@ -2,10 +2,120 @@ html {
   background-color: hsl(216, 12%, 8%);
 }
 
-h2 {
-  color: hsl(0, 0%, 100%);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p {
+.card--container {
+  margin-top: 12.18rem;
+  position: relative;
+}
+
+.star{
+  background-color: hsl(213, 19%, 18%);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.8rem 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.card{
+  font-family: Overpass;
+  background: radial-gradient(#232A34, #181E27);
+  border-radius: 2rem;
+  height: 26rem;
+  width: 25.75rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.title {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.5rem;
+}
+
+.text {
   color: hsl(217, 12%, 63%);
+  margin-bottom: 1.5rem;
+}
+
+.nb{
+  background-color: #262E38;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  color: hsl(217, 12%, 63%);
+  font-size: 1rem;
+  height: 3.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: all 0.5s;
+  width: 3.2rem;
+}
+
+.nb:focus {
+  background-color: #FC7614;
+  color: white;
+}
+
+.nb:hover {
+  background-color: #7C8798;
+  color: hsl(0, 0%, 100%);
+}
+.nb:hover:hover::before {
+  color: white;
+}
+.nb--container {
+  display: flex;
+  justify-content: space-between;
+}
+.nb::before {
+  bottom: 1.125rem;
+  color: #7C8798;
+  content: counter(step-counter);
+  counter-increment: step-counter;
+  left: 1.25rem;
+  position: absolute;
+}
+
+.sub{
+  border: none;
+  background-color: #FC7614;
+  border-radius: 3rem;
+  color: white;
+  letter-spacing: 0.125rem;
+  padding: 1rem 9rem;
+  margin-top: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.sub:hover {
+  background-color: white;
+  color: #FC7614;
+}
+
+.card__back {
+  padding-top: 5.7rem;
+  position: absolute;
+  color: hsl(217, 12%, 63%);
+  left: 50%;
+  margin-left: -12.875rem;
+  text-align: center;
+  top: 0;
+  z-index: -1;
+}
+
+.attribution{
+  margin-top: 0.7rem;
+  color: white;
 }
